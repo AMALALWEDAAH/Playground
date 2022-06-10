@@ -5,13 +5,13 @@ app = Flask(__name__)
 
 # The "@" decorator associates this route with the function immediately following
 @app.route('/play/<num>')
-def sayhello_world(num, color="red"):
+def play_times(num, color="skyblue"):
     # Return the string 'Hello World!' as a response
     return render_template("index.html", _num=int(num), color=str(color))
 
 
 @app.route('/play')
-def play(num=3, color="red"):
+def play(num=3, color="skyblue"):
     # Return the string 'Hello World!' as a response
     return render_template("index.html", _num=int(num), color=str(color))
 
